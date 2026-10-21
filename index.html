@@ -3,471 +3,648 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yashaswini Sandeep | Portfolio Prototype</title>
+  <title>Yashaswini Sandeep | Business Intelligence &amp; Business Analyst, Munich</title>
+  <meta name="description" content="Business Intelligence and Business Analyst in Munich. Reporting that contracts depend on, checked before it ships. A weighted view of my highest-impact work. Available from late November 2026." />
+  <meta property="og:title" content="Yashaswini Sandeep | Business Intelligence & Business Analyst" />
+  <meta property="og:description" content="Reporting that contracts depend on, checked before it ships. Power BI, SQL, Databricks. Munich, available from late November 2026." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#F7FBFF" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%239FD0F0'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' font-weight='700' text-anchor='middle' fill='%232F2A25'%3EY%3C/text%3E%3C/svg%3E" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <canvas id="networkCanvas"></canvas>
+  <a class="skip" href="#main">Skip to content</a>
 
-  <div class="nav-shell">
-    <nav>
-      <div class="brand"><div class="logo">Y</div><span>Yashaswini Sandeep</span></div>
+  <header class="nav-shell">
+    <nav class="nav" aria-label="Main">
+      <a class="brand" href="#top" aria-label="Yashaswini Sandeep, home">
+        <span class="logo" aria-hidden="true">Y</span>
+        <span class="brand-name">Yashaswini Sandeep</span>
+      </a>
       <div class="links">
-        <a href="#about" class="active">About</a>
-        <a href="#skills">Skills</a>
+        <a href="#impact">Impact</a>
+        <a href="#scorecard">SLA scorecard</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#craft">How I work</a>
         <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
         <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
       </div>
-      <a class="cta" href="#contact">Hire Me</a>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch colour theme">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9c0-.5 0-.9-.1-1.3a6 6 0 0 1-7.6-7.6A9 9 0 0 0 12 3z"/></svg>
+        </button>
+        <a class="btn btn-primary btn-sm" href="#contact">Get in touch</a>
+      </div>
     </nav>
-  </div>
+  </header>
 
-  <section id="about">
-    <div class="wrap hero-grid">
-      <div>
-        <div class="chip"><span class="dot"></span> Python | SQL | Machine Learning | Data Visualization | Statistical Analysis </div>
-        <h1><span class="gradient">Yashaswini Sandeep.</span></h1>
-        <div class="lead">Building AI-powered data systems at the intersection of machine learning, analytics, and real-world business impact.</div>
-        <div class="glass">
-          <p>Data Analyst and M.Sc. Business Intelligence & Data Science candidate in Germany with 2+ years of experience delivering end-to-end analytics solutions across logistics and automotive platforms. Skilled in SQL, Python, R, cloud-based analytics environments, statistical analysis, forecasting, and predictive analytics to transform large-scale operational data into decision-ready insights. Passionate about leveraging AI-driven analytics to help organizations adapt to evolving market conditions, improve efficiency, and drive sustainable business growth. Interested in specializing in data-driven solutions across the Automotive, Logistics, IT, Healthcare, Finance, and Education industries.</p>
-          <div class="explore">Explore ↓</div>
-        </div>
-      </div>
-
-      <div class="orbital-box brain-hero" aria-hidden="true">
-        <div class="brain-scene">
-          <div class="brain-beams">
-            <span></span><span></span><span></span><span></span><span></span><span></span>
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Business Intelligence &amp; Business Analyst · Munich</p>
+          <h1>Reporting that contracts depend on, <em>checked before it ships.</em></h1>
+          <p class="lead">I turn contract and business requirements into KPI logic, verify it against the source systems, and write findings that operations, clients and leadership can act on. Two-plus years on Nissan–Renault analytics at Accenture, now at Allianz Partners.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#impact">See my weighted impact</a>
+            <a class="btn btn-ghost" href="mailto:yashaswini.sandeep.27@gmail.com">Email me</a>
           </div>
-
-          <div class="brain-glow"></div>
-
-          <div class="brain-shell">
-            <div class="brain-wire wire1"></div>
-            <div class="brain-wire wire2"></div>
-            <div class="brain-wire wire3"></div>
-            <div class="brain-wire wire4"></div>
-            <div class="brain-core"></div>
-          </div>
-
-          <div class="brain-ring ring-back"></div>
-          <div class="brain-ring ring-mid"></div>
-          <div class="brain-ring ring-front"></div>
-
-          <span class="brain-pulse p1"></span>
-          <span class="brain-pulse p2"></span>
-          <span class="brain-pulse p3"></span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="skills">
-    <div class="wrap">
-      <div class="title-block">
-        <div class="eyebrow">Toolkit</div>
-        <h2><span class="gradient">Technical Skills</span></h2>
-        <div class="subtitle">A practical toolkit for analytics, machine learning, visualization, and business problem solving.</div>
-      </div>
-
-      <div class="skills-grid">
-        <div class="panel skills-card">
-          <h3 class="skill-title-cyan">
-            <span class="skill-icon cyan">&lt;/&gt;</span>
-            Languages
-          </h3>
-          <div class="pill-wrap">
-            <span class="pill">Python</span>
-            <span class="pill">SQL</span>
-            <span class="pill">R</span>
-            <span class="pill">Java</span>
-            <span class="pill">JavaScript</span>
-            <span class="pill">HTML/CSS</span>
-          </div>
-        </div>
-
-        <div class="panel skills-card">
-          <h3 class="skill-title-purple">
-            <span class="skill-icon purple">🧠</span>
-            Data Science &amp; ML
-          </h3>
-          <div class="pill-wrap">
-            <span class="pill">Scikit-learn</span>
-            <span class="pill">TensorFlow</span>
-            <span class="pill">PyTorch</span>
-            <span class="pill">Pandas</span>
-            <span class="pill">NumPy</span>
-            <span class="pill">SciPy</span>
-            <span class="pill">XGBoost</span>
-            <span class="pill">LightGBM</span>
-            <span class="pill">Random Forest</span>
-            <span class="pill">Logistic Regression</span>
-            <span class="pill">Decision Trees</span>
-            <span class="pill">ARIMA</span>
-          </div>
-        </div>
-
-        <div class="panel skills-card">
-          <h3 class="skill-title-green">
-            <span class="skill-icon green">✦</span>
-            Analytics &amp; Statistics
-          </h3>
-          <div class="pill-wrap">
-            <span class="pill">Exploratory Data Analysis</span>
-            <span class="pill">Hypothesis Testing</span>
-            <span class="pill">Statistical Modeling</span>
-            <span class="pill">Time Series Forecasting</span>
-            <span class="pill">Regression Analysis</span>
-            <span class="pill">Feature Engineering</span>
-            <span class="pill">Predictive Analytics</span>
-          </div>
-        </div>
-
-        <div class="panel skills-card">
-          <h3 class="skill-title-orange">
-            <span class="skill-icon orange">☁</span>
-            Tools &amp; Cloud
-          </h3>
-          <div class="pill-wrap">
-            <span class="pill">Power BI</span>
-            <span class="pill">Tableau</span>
-            <span class="pill">Jupyter Notebook</span>
-            <span class="pill">Git</span>
-            <span class="pill">Snowflake</span>
-            <span class="pill">Google BigQuery</span>
-            <span class="pill">MySQL</span>
-            <span class="pill">PostgreSQL</span>
-            <span class="pill">AWS</span>
-            <span class="pill">Microsoft Azure</span>
-            <span class="pill">Google Cloud Platform</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="stats">
-        <div class="stat"><strong>500K+</strong><span>Data Records Analysed</span></div>
-        <div class="stat"><strong>12+</strong><span>Models Deployed</span></div>
-        <div class="stat"><strong>15+</strong><span>Projects</span></div>
-        <div class="stat"><strong>2.5+</strong><span>Years Experience</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="experience">
-    <div class="wrap">
-      <div class="title-block">
-        <div class="eyebrow">Journey</div>
-        <h2>Work Experience</h2>
-        <div class="subtitle">A path through data analytics, business intelligence, cloud-based platforms, and operational forecasting.</div>
-      </div>
-      <div class="timeline">
-        <div class="t-item">
-          <div class="company-line"><span class="company-pill">Hapag-Lloyd AG</span><span>Mar 2025 – Jun 2025</span></div>
-          <div class="job-card">
-            <h3>Data Science Intern</h3>
-            <p>Hamburg, Germany</p>
-            <ul>
-              <li>Built machine learning models on 205K+ container bookings (22K no-shows) to estimate booking-level risk and support overbooking strategy.</li>
-              <li>Engineered 30+ predictive features and trained Logistic Regression, Random Forest, and XGBoost, selecting Random Forest (88.8% accuracy, 93% reliability).</li>
-              <li>Performed EDA and statistical analysis to identify key operational drivers including customer behavior, container weight, and route characteristics.</li>
-              <li>Translated model outputs into risk-based booking classifications, enabling potential cost reductions from €8K to €3K per shipment.</li>
-            </ul>
-            <div class="tag-row"><span class="tag">Python</span><span class="tag">Data Wrangling</span><span class="tag">Exploratory Data Analysis</span><span class="tag">Feature Engineering</span><span class="tag">Modeling</span></div>
-          </div>
-        </div>
-
-        <div class="t-item">
-          <div class="company-line"><span class="company-pill">Accenture</span><span>May 2023 – Aug 2024</span></div>
-          <div class="job-card">
-            <h3>Packaged App Development Analyst</h3>
-            <p>Bengaluru, India</p>
-            <ul>
-              <li>Analyzed 500K+ vehicle parts & warranty records using SQL, detecting defect patterns and improving reporting accuracy by ~20%.</li>
-              <li>Identified 10+ high-risk vehicle components through failure trend analysis in EVIS, enabling faster engineering corrective actions.</li>
-              <li>Built Power BI dashboards for 25+ global markets, enabling real-time monitoring of vehicle sales and supply-chain KPIs.</li>
-              <li>Maintained a global B2B analytics platform used in 50+ countries, resolving 100+ incidents while sustaining 99%+ uptime.</li>
-            </ul>
-            <div class="tag-row"><span class="tag">SQL</span><span class="tag">Power BI</span><span class="tag">Data Analysis</span><span class="tag">Cloud Platforms</span><span class="tag">Root Cause Analysis</span></div>
-          </div>
-        </div>
-
-        <div class="t-item">
-          <div class="company-line"><span class="company-pill">Accenture</span><span>May 2022 – May 2023</span></div>
-          <div class="job-card">
-            <h3>Software Application Developer</h3>
-            <p>Bengaluru, India</p>
-            <ul>
-              <li>Developed 5+ enterprise workflow applications, reducing manual operational processes by ~20%.</li>
-              <li>Integrated REST/SOAP APIs across sales, warranty, and logistics systems, improving cross-platform data flow.</li>
-              <li>Executed QA testing and release validation across staging and production environments supporting 50+ countries.</li>
-              <li>Resolved 30+ development issues in Agile sprints, improving platform stability and system performance.</li>
-            </ul>
-            <div class="tag-row"><span class="tag">APIs</span><span class="tag">Developing & Testing</span><span class="tag">Automation</span><span class="tag">Integration</span><span class="tag">Cloud</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="education">
-    <div class="wrap">
-      <div class="title-block">
-        <div class="eyebrow">Foundation</div>
-        <h2>Education</h2>
-        <div class="subtitle">Academic background shaping my work in analytics, data science, and business intelligence.</div>
-      </div>
-      <div class="cards-2">
-        <article class="panel">
-          <div class="panel-head"><div class="icon">🎓</div><div class="date">Sep 2024 – Aug 2026</div></div>
-          <div class="card-title">M.Sc. in Business Intelligence & Data Science</div>
-          <div class="card-sub">International School of Management, Germany</div>
-          <div class="badge">Current Program</div>
-          <ul>
-            <li>Advanced analytics using Python, R, and SQL for large-scale data analysis and predictive modelling.</li>
-            <li>Development of machine learning models, forecasting systems, and data pipelines for business decision support.</li>
-            <li>Designed interactive BI dashboards and analytics solutions across finance, marketing, and supply chain case studies.</li>
+          <ul class="facts" aria-label="Availability">
+            <li><span class="dot"></span>Available from late November 2026</li>
+            <li>Full-time · Business Intelligence, Data and Business Analyst roles</li>
+            <li>M.Sc. Business Intelligence &amp; Data Science · English C1 · German A1 → B1</li>
           </ul>
-          <div class="tag-row"><span class="tag">Machine Learning</span><span class="tag">Feature Engineering</span><span class="tag">Time Series Forecasting</span><span class="tag">ETL Pipelines</span><span class="tag">Data Visualization</span></div>
-        </article>
+        </div>
 
-        <article class="panel">
-          <div class="panel-head">
-            <div class="icon" style="color:#7cf3ff; border-color:rgba(124,243,255,.24); background:rgba(124,243,255,.08)">🌍</div>
-            <div class="date">Study Abroad Semester</div>
+        <aside class="snap" aria-label="Impact snapshot">
+          <header class="snap-head">
+            <span class="snap-title">Impact snapshot</span>
+            <span class="snap-sub">SLA penalty scorecard · Allianz Partners · client anonymised</span>
+          </header>
+          <div class="snap-main">
+            <strong>4×</strong>
+            <span>more appointment tows measurable<br /><b>~18 → ~72</b> after rebuilding the base</span>
           </div>
-          <div class="card-title">M.Sc. in Business Analytics</div>
-          <div class="card-sub">Lancaster University, United Kingdom</div>
-          <div class="badge">Exchange Semester</div>
-          <ul>
-            <li>Optimization Analytics – Built cost-minimization and scenario models.</li>
-            <li>Statistical Modelling (R) – Regression, diagnostics, and hypothesis testing.</li>
-            <li>Python & Dashboards – Streamlit apps for KPI visualization.</li>
-            <li>Forecasting & Decision Analytics – Demand, revenue, and cost modelling.</li>
+          <div class="snap-row">
+            <div><strong>22</strong><span>data and logic defects logged, 18 resolved</span></div>
+            <div><strong>6 of 18</strong><span>SLAs carry penalties and are in scope</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- IMPACT LEDGER -->
+    <section class="block" id="impact">
+      <div class="wrap">
+        <div class="block-head">
+          <p class="eyebrow">Weighted impact</p>
+          <h2>Where my work carries the most weight</h2>
+          <p class="sub">Eight results, ranked. Each is scored 1–3 on three questions: what was at stake, how directly the result was measured, and how much of the work was mine. The weight is the product of the three.</p>
+        </div>
+
+        <div class="ledger" role="table" aria-label="Weighted impact ledger">
+          <div class="l-head" role="row">
+            <span role="columnheader">Result</span>
+            <span role="columnheader">Stake</span>
+            <span role="columnheader">Proof</span>
+            <span role="columnheader">Ownership</span>
+            <span role="columnheader">Weight</span>
+          </div>
+
+          <div class="l-row top" role="row">
+            <div class="l-what" role="cell"><strong>22 data and logic defects logged in a penalty scorecard</strong><span>Allianz Partners · 18 resolved, 1 fix tested, 3 open and tracked</span></div>
+            <div class="l-cell" role="cell" data-label="Stake"><span class="meter" aria-label="3 of 3"><i class="on"></i><i class="on"></i><i class="on"></i></span></div>
+            <div class="l-cell" role="cell" data-label="Proof"><span class="meter" aria-label="3 of 3"><i class="on"></i><i class="on"></i><i class="on"></i></span></div>
+            <div class="l-cell" role="cell" data-label="Ownership"><span class="meter" aria-label="2 of 3"><i class="on"></i><i class="on"></i><i></i></span></div>
+            <div class="l-weight" role="cell" data-label="Weight"><span class="wbar"><i style="--w:66.7%"></i></span><b>18</b></div>
+          </div>
+
+          <div class="l-row top" role="row">
+            <div class="l-what" role="cell"><strong>Measurable appointment tows: ~18 → ~72</strong><span>Allianz Partners · rebuilt the base without an outlier filter that dropped 41 of 56</span></div>
+            <div class="l-cell" role="cell" data-label="Stake"><span class="meter" aria-label="3 of 3"><i class="on"></i><i class="on"></i><i class="on"></i></span></div>
+            <div class="l-cell" role="cell" data-label="Proof"><span class="meter" aria-label="3 of 3"><i class="on"></i><i class="on"></i><i class="on"></i></span></div>
+            <div class="l-cell" role="cell" data-label="Ownership"><span class="meter" aria-label="2 of 3"><i class="on"></i><i class="on"></i><i></i></span></div>
+            <div class="l-weight" role="cell" data-label="Weight"><span class="wbar"><i style="--w:66.7%"></i></span><b>18</b></div>
+          </div>
+
+          <div class="l-row top" role="row">
+            <div class="l-what" role="cell"><strong>Reconciliation with the client’s process-mining export</strong><span>Allianz Partners · 325-row August export: 11 apparent gaps traced to timing, 4 post-completion cancellations isolated; Q3 reconciliation completed, issues reported and fixed</span></div>
+            <div class="l-cell" role="cell" data-label="Stake"><span class="meter" aria-label="3 of 3"><i class="on"></i><i class="on"></i><i class="on"></i></span></div>
+            <div class="l-cell" role="cell" data-label="Proof"><span class="meter" aria-label="3 of 3"><i class="on"></i><i class="on"></i><i class="on"></i></span></div>
+            <div class="l-cell" role="cell" data-label="Ownership"><span class="meter" aria-label="2 of 3"><i class="on"></i><i class="on"></i><i></i></span></div>
+            <div class="l-weight" role="cell" data-label="Weight"><span class="wbar"><i style="--w:66.7%"></i></span><b>18</b></div>
+          </div>
+
+          <div class="l-row top" role="row">
+            <div class="l-what" role="cell"><strong>Warranty analytics: 500K+ records, 10+ high-risk components</strong><span>Accenture, Nissan–Renault · SQL failure-pattern analysis</span></div>
+            <div class="l-cell" role="cell" data-label="Stake"><span class="meter" aria-label="3 of 3"><i class="on"></i><i class="on"></i><i class="on"></i></span></div>
+            <div class="l-cell" role="cell" data-label="Proof"><span class="meter" aria-label="2 of 3"><i class="on"></i><i class="on"></i><i></i></span></div>
+            <div class="l-cell" role="cell" data-label="Ownership"><span class="meter" aria-label="3 of 3"><i class="on"></i><i class="on"></i><i class="on"></i></span></div>
+            <div class="l-weight" role="cell" data-label="Weight"><span class="wbar"><i style="--w:66.7%"></i></span><b>18</b></div>
+          </div>
+
+          <div class="l-row" role="row">
+            <div class="l-what" role="cell"><strong>Unstable forecast-accuracy metric: symmetric formula tested</strong><span>Allianz Partners · the metric divided by the forecast and gave values such as −321%; card change deferred pending framing</span></div>
+            <div class="l-cell" role="cell" data-label="Stake"><span class="meter" aria-label="3 of 3"><i class="on"></i><i class="on"></i><i class="on"></i></span></div>
+            <div class="l-cell" role="cell" data-label="Proof"><span class="meter" aria-label="2 of 3"><i class="on"></i><i class="on"></i><i></i></span></div>
+            <div class="l-cell" role="cell" data-label="Ownership"><span class="meter" aria-label="2 of 3"><i class="on"></i><i class="on"></i><i></i></span></div>
+            <div class="l-weight" role="cell" data-label="Weight"><span class="wbar"><i style="--w:44.4%"></i></span><b>12</b></div>
+          </div>
+
+          <div class="l-row" role="row">
+            <div class="l-what" role="cell"><strong>No-show model: AUC 0.93 on 205K+ bookings</strong><span>Hapag-Lloyd · decision cost €8K → €3K per cycle, simulated</span></div>
+            <div class="l-cell" role="cell" data-label="Stake"><span class="meter" aria-label="3 of 3"><i class="on"></i><i class="on"></i><i class="on"></i></span></div>
+            <div class="l-cell" role="cell" data-label="Proof"><span class="meter" aria-label="2 of 3"><i class="on"></i><i class="on"></i><i></i></span></div>
+            <div class="l-cell" role="cell" data-label="Ownership"><span class="meter" aria-label="2 of 3"><i class="on"></i><i class="on"></i><i></i></span></div>
+            <div class="l-weight" role="cell" data-label="Weight"><span class="wbar"><i style="--w:44.4%"></i></span><b>12</b></div>
+          </div>
+
+          <div class="l-row" role="row">
+            <div class="l-what" role="cell"><strong>20+ KPIs in Power BI for 25+ markets</strong><span>Accenture, Nissan–Renault · 6 dashboards in weekly performance reporting</span></div>
+            <div class="l-cell" role="cell" data-label="Stake"><span class="meter" aria-label="2 of 3"><i class="on"></i><i class="on"></i><i></i></span></div>
+            <div class="l-cell" role="cell" data-label="Proof"><span class="meter" aria-label="2 of 3"><i class="on"></i><i class="on"></i><i></i></span></div>
+            <div class="l-cell" role="cell" data-label="Ownership"><span class="meter" aria-label="3 of 3"><i class="on"></i><i class="on"></i><i class="on"></i></span></div>
+            <div class="l-weight" role="cell" data-label="Weight"><span class="wbar"><i style="--w:44.4%"></i></span><b>12</b></div>
+          </div>
+
+          <div class="l-row" role="row">
+            <div class="l-what" role="cell"><strong>Business-partner roadmap and Jira governance</strong><span>Allianz Partners · five-stage roadmap (parts reused by the product owner), 40 epics labelled</span></div>
+            <div class="l-cell" role="cell" data-label="Stake"><span class="meter" aria-label="2 of 3"><i class="on"></i><i class="on"></i><i></i></span></div>
+            <div class="l-cell" role="cell" data-label="Proof"><span class="meter" aria-label="2 of 3"><i class="on"></i><i class="on"></i><i></i></span></div>
+            <div class="l-cell" role="cell" data-label="Ownership"><span class="meter" aria-label="3 of 3"><i class="on"></i><i class="on"></i><i class="on"></i></span></div>
+            <div class="l-weight" role="cell" data-label="Weight"><span class="wbar"><i style="--w:44.4%"></i></span><b>12</b></div>
+          </div>
+        </div>
+
+        <details class="rubric">
+          <summary>How the scores work</summary>
+          <div class="rubric-grid">
+            <div><h3>Stake</h3><p><b>3</b> contract, money or a client at risk · <b>2</b> an operational decision · <b>1</b> academic or practice</p></div>
+            <div><h3>Proof</h3><p><b>3</b> measured on real data or a held-out test · <b>2</b> output measured, business outcome not tracked · <b>1</b> simulated or estimated</p></div>
+            <div><h3>Ownership</h3><p><b>3</b> I did most of it · <b>2</b> shared with a named colleague or team · <b>1</b> I contributed</p></div>
+          </div>
+          <p class="rubric-note">Weight = Stake × Proof × Ownership, from 1 to 27. These are my own scores, shown so you can disagree with them. I would rather rank honestly than round up.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- SLA SCORECARD -->
+    <section class="block alt" id="scorecard">
+      <div class="wrap">
+        <div class="block-head">
+          <p class="eyebrow">Real work · Allianz Partners · 2026</p>
+          <h2>An SLA penalty scorecard the client could trust</h2>
+        </div>
+
+        <div class="case-grid">
+          <div class="case-text">
+            <h3>The problem</h3>
+            <p>A premium automotive client’s roadside-assistance contract has 18 SLAs, six of which carry financial penalties. Operations and the client needed a report they could act on, and a wrong number meant a wrong penalty.</p>
+
+            <h3>What I did</h3>
+            <ul class="ticks">
+              <li>Catalogued all 18 SLAs and their data availability: 6 carry penalties, and 11 had no real data yet. Where data or a definition was missing, the report shows “No data” instead of a misleading value.</li>
+              <li>Wrote a 9-page mockup and a page-by-page Power BI build guide, then built the towing, volume forecast, CSAT, repair-on-spot and replacement-car pages, each with a written finding.</li>
+              <li>Verified measures line by line with DAX query view and numerator-and-denominator checks, and logged every defect with its cause and status.</li>
+              <li>Reconciled the report against the client’s process-mining export and billing data, including the Q3 reconciliation: the issues found were reported and fixed.</li>
+              <li>Added a click-through glossary overlay so business users can read each KPI definition inside the report.</li>
+            </ul>
+
+            <h3>What verification caught</h3>
+            <ul class="ticks">
+              <li>Blank actuals defaulted to the worst penalty tier. I traced it through four layers of DAX to missing blank checks.</li>
+              <li>249 rows with missing elapsed time were silently counted in the shortest wait bucket, and an on-time flag with no lower bound counted negative elapsed times as on time.</li>
+              <li>Creation and completion times were in UTC while dispatch and arrival were local, inflating waits by about two hours.</li>
+              <li>An outlier filter dropped 41 of 56 appointment tows, so only about 18 could be measured.</li>
+            </ul>
+
+            <h3>What changed</h3>
+            <p>I rebuilt the appointment base without that filter. Measurable appointments rose from about 18 to about 72, and the KPI itself moved by only about a point. The gain is coverage, not a better score, and the report now says so.</p>
+
+            <h3>My role</h3>
+            <p>I built and verified the report pages and own the DAX of the monitoring pages. A colleague and I built the Databricks KPI logic and data model together, and KPI definitions come from the product owner’s SLA guide and operations sign-off. We fixed logic issues together at query level. Where a definition was missing, I escalated it.</p>
+          </div>
+
+          <div class="charts">
+            <figure class="chart-card">
+              <figcaption>
+                <strong>Appointment tows measurable against the SLA</strong>
+                <span>Before and after rebuilding the base</span>
+              </figcaption>
+              <svg class="bars" viewBox="0 0 360 250" role="img" aria-label="Bar chart: about 18 measurable appointment tows before the rebuild, about 72 after.">
+                <line class="grid" x1="40" y1="30" x2="340" y2="30"/>
+                <line class="grid" x1="40" y1="90" x2="340" y2="90"/>
+                <line class="grid" x1="40" y1="150" x2="340" y2="150"/>
+                <line class="axis" x1="40" y1="210" x2="340" y2="210"/>
+                <text class="tick" x="32" y="34" text-anchor="end">72</text>
+                <text class="tick" x="32" y="94" text-anchor="end">48</text>
+                <text class="tick" x="32" y="154" text-anchor="end">24</text>
+                <text class="tick" x="32" y="214" text-anchor="end">0</text>
+                <rect class="bar bar-before" x="80" y="165" width="82" height="45" rx="4"/>
+                <rect class="bar bar-after" x="220" y="30" width="82" height="180" rx="4"/>
+                <text class="val" x="121" y="156" text-anchor="middle">~18</text>
+                <text class="val val-after" x="261" y="21" text-anchor="middle">~72</text>
+                <text class="lbl" x="121" y="232" text-anchor="middle">Before</text>
+                <text class="lbl" x="261" y="232" text-anchor="middle">After</text>
+              </svg>
+              <p class="chart-note">Four times as many appointments can be checked. This is a count of appointments, not a performance figure.</p>
+            </figure>
+
+            <figure class="chart-card">
+              <figcaption>
+                <strong>Where the defects hid</strong>
+                <span>22 findings in my register, grouped by type</span>
+              </figcaption>
+              <svg class="defects" viewBox="0 0 430 262" role="img" aria-label="Horizontal bar chart of 22 logged defects by type: scope and filters 6, denominators and definitions 6, blank handling 3, time and dates 3, duplicates and grain 2, reconciliation and verification 2. Eighteen resolved, one fix tested, three open.">
+                <g class="d-lbl">
+                  <text x="0" y="35">Scope &amp; filters</text>
+                  <text x="0" y="73">Denominators &amp; definitions</text>
+                  <text x="0" y="111">Blank handling</text>
+                  <text x="0" y="149">Time &amp; dates</text>
+                  <text x="0" y="187">Duplicates &amp; grain</text>
+                  <text x="0" y="225">Reconciliation</text>
+                </g>
+                <!-- 30px per finding; bars start at x=190 -->
+                <rect class="seg-res"  x="190" y="20"  width="150" height="22" rx="3"/>
+                <rect class="seg-open" x="340" y="20"  width="30"  height="22" rx="3"/>
+                <text class="d-n" x="380" y="36">6</text>
+
+                <rect class="seg-res"  x="190" y="58"  width="90"  height="22" rx="3"/>
+                <rect class="seg-prog" x="280" y="58"  width="30"  height="22" rx="3"/>
+                <rect class="seg-open" x="310" y="58"  width="60"  height="22" rx="3"/>
+                <text class="d-n" x="380" y="74">6</text>
+
+                <rect class="seg-res"  x="190" y="96"  width="90"  height="22" rx="3"/>
+                <text class="d-n" x="290" y="112">3</text>
+
+                <rect class="seg-res"  x="190" y="134" width="90"  height="22" rx="3"/>
+                <text class="d-n" x="290" y="150">3</text>
+
+                <rect class="seg-res"  x="190" y="172" width="60"  height="22" rx="3"/>
+                <text class="d-n" x="260" y="188">2</text>
+
+                <rect class="seg-res"  x="190" y="210" width="60"  height="22" rx="3"/>
+                <text class="d-n" x="260" y="226">2</text>
+
+                <g class="legend">
+                  <rect class="seg-res" x="0" y="246" width="12" height="12" rx="3"/><text x="18" y="257">Resolved (18)</text>
+                  <rect class="seg-prog" x="128" y="246" width="12" height="12" rx="3"/><text x="146" y="257">Fix tested (1)</text>
+                  <rect class="seg-open" x="256" y="246" width="12" height="12" rx="3"/><text x="274" y="257">Open (3)</text>
+                </g>
+              </svg>
+              <p class="chart-note">Three findings are still open and tracked. I list them because a register that shows only closed items is not a register.</p>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROADMAP CASE -->
+    <section class="block" id="roadmap">
+      <div class="wrap">
+        <div class="block-head">
+          <p class="eyebrow">Real work · Allianz Partners · 2026</p>
+          <h2>Business partner reporting roadmap</h2>
+          <p class="sub">The BI team needed an executive-level view of existing partner reporting, partner requirements and delivery sequencing. The mandate was to stay at portfolio level and not to specify KPIs.</p>
+        </div>
+
+        <ol class="chevrons" aria-label="Five-stage discovery roadmap">
+          <li><span>1</span>Needs understanding</li>
+          <li><span>2</span>Metric definitions</li>
+          <li><span>3</span>Data request and loading</li>
+          <li><span>4</span>Iterative dashboard development</li>
+          <li><span>5</span>Validation and reconciliation</li>
+        </ol>
+
+        <div class="road-grid">
+          <div class="road-text">
+            <h3>What I did</h3>
+            <ul class="ticks">
+              <li>Segmented the top partners by sector and reverse-engineered existing reports into Goal, Sub-goal, Business question and Metric, account by account.</li>
+              <li>Developed the five-stage discovery roadmap for the Top 10 partners and consolidated it into an OKR-aligned roadmap across six BI squads, plus a cross-squad view for one account type.</li>
+              <li>Incorporated stakeholder input from a discovery call with two airline reporting counterparts.</li>
+              <li>Simplified the first consolidated version after stakeholder feedback on clarity.</li>
+            </ul>
+            <h3>Status transparency</h3>
+            <p>Every sector carries an explicit status: validated in stakeholder discovery, roadmap defined, or planned and pending discovery. Assumptions are never presented as findings.</p>
+            <h3>Outcome</h3>
+            <p>The product owner rated the roadmap “pretty good” and asked to reuse parts of it for ongoing planning.</p>
+          </div>
+
+          <div class="road-side">
+            <figure class="chart-card flat">
+              <figcaption>
+                <strong>Sector roadmap status</strong>
+                <span>Maturity of each sector roadmap</span>
+              </figcaption>
+              <ul class="sectors">
+                <li class="grounded"><span class="sdot"></span>Airlines<em>validated in discovery call</em></li>
+                <li class="defined"><span class="sdot"></span>Automotive<em>roadmap defined</em></li>
+                <li><span class="sdot"></span>Travel agencies and tour operators<em>planned · pending discovery</em></li>
+                <li><span class="sdot"></span>Banking<em>planned · pending discovery</em></li>
+                <li><span class="sdot"></span>Government services<em>planned · pending discovery</em></li>
+                <li><span class="sdot"></span>Live entertainment<em>planned · pending discovery</em></li>
+              </ul>
+            </figure>
+
+            <figure class="chart-card flat">
+              <figcaption>
+                <strong>Jira governance: 40 epics labelled</strong>
+                <span>After finding zero initiatives and epics linked by release, not parent</span>
+              </figcaption>
+              <div class="stackbar" role="img" aria-label="Stacked bar of 40 labelled epics: 19 strategic programme, 20 legacy retirement, 1 other.">
+                <i class="sb-a" style="--w:47.5%">19</i>
+                <i class="sb-b" style="--w:50%">20</i>
+                <i class="sb-c" style="--w:2.5%"></i>
+              </div>
+              <ul class="sb-legend">
+                <li><span class="sb-a"></span>19 strategic programme and migration</li>
+                <li><span class="sb-b"></span>20 tied to retiring legacy BI</li>
+                <li><span class="sb-c"></span>1 other</li>
+              </ul>
+              <p class="chart-note">I proposed the hierarchy options, defined the three labels and applied them. The product owner confirmed the structure.</p>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CRAFT -->
+    <section class="block alt" id="craft">
+      <div class="wrap">
+        <div class="block-head">
+          <p class="eyebrow">How I work</p>
+          <h2>Most reporting errors are not in the visuals.</h2>
+          <p class="sub">They sit in the definitions and the logic behind them, so that is where I spend the time, and who I spend it with.</p>
+        </div>
+
+        <ol class="flow">
+          <li><span class="num">1</span><h3>Requirement</h3><p>Ops, client and contract wording, in plain language.</p></li>
+          <li><span class="num">2</span><h3>KPI definition</h3><p>One written rule per KPI, including edge cases.</p></li>
+          <li class="hot"><span class="num">3</span><h3>SQL / DAX logic</h3><p>Star schema, DAX and SQL reviewed line by line.</p></li>
+          <li class="hot"><span class="num">4</span><h3>Validate and reconcile</h3><p>Against process-mining data, billing data and source tables.</p></li>
+          <li><span class="num">5</span><h3>Report and finding</h3><p>A written finding per KPI and an in-report glossary.</p></li>
+        </ol>
+        <p class="flow-note"><span class="swatch"></span>Steps 3 and 4 are where I caught most defects on the SLA scorecard.</p>
+
+        <div class="craft-grid">
+          <article class="spec">
+            <header>
+              <span class="spec-tag">KPI spec · illustrative excerpt</span>
+              <h3>Appointment tow punctuality</h3>
+            </header>
+            <dl>
+              <div><dt>Business question</dt><dd>Did the tow arrive within the agreed window?</dd></div>
+              <div><dt>Rule</dt><dd>A tow booked for a later time is measured against the booked time, not the time the case was created.</dd></div>
+              <div><dt>Edge case</dt><dd>A blank actual shows “No data”. It never defaults to the worst penalty tier.</dd></div>
+              <div><dt>Time</dt><dd>Compare in one time zone and convert only for display.</dd></div>
+              <div><dt>Coverage</dt><dd>Show how many cases the KPI could be calculated on, so blind spots are visible.</dd></div>
+              <div><dt>Finding</dt><dd>One written sentence under the KPI saying what the number means.</dd></div>
+            </dl>
+            <footer>Written in the style of my KPI documentation. Not a client document.</footer>
+          </article>
+
+          <figure class="hub-card">
+            <figcaption>
+              <strong>Who I work with</strong>
+              <span>What each group needed from the reporting</span>
+            </figcaption>
+            <svg class="hub" viewBox="0 0 440 300" role="img" aria-label="Diagram of stakeholders around the BI analyst: operations, product owner, data engineering, client, business partners and BI leadership.">
+              <g class="spokes">
+                <line x1="140" y1="45" x2="220" y2="150"/>
+                <line x1="140" y1="150" x2="220" y2="150"/>
+                <line x1="140" y1="255" x2="220" y2="150"/>
+                <line x1="300" y1="45" x2="220" y2="150"/>
+                <line x1="300" y1="150" x2="220" y2="150"/>
+                <line x1="300" y1="255" x2="220" y2="150"/>
+              </g>
+              <circle class="core" cx="220" cy="150" r="44"/>
+              <text class="core-t" x="220" y="146" text-anchor="middle">BI</text>
+              <text class="core-t" x="220" y="163" text-anchor="middle">analyst</text>
+
+              <g class="node"><rect x="8" y="20" width="132" height="50" rx="12"/><text class="n1" x="74" y="42" text-anchor="middle">Operations</text><text class="n2" x="74" y="58" text-anchor="middle">KPI definitions</text></g>
+              <g class="node"><rect x="8" y="125" width="132" height="50" rx="12"/><text class="n1" x="74" y="147" text-anchor="middle">Product owner</text><text class="n2" x="74" y="163" text-anchor="middle">priorities, design review</text></g>
+              <g class="node"><rect x="8" y="230" width="132" height="50" rx="12"/><text class="n1" x="74" y="252" text-anchor="middle">Data engineering</text><text class="n2" x="74" y="268" text-anchor="middle">query-level fixes</text></g>
+
+              <g class="node"><rect x="300" y="20" width="132" height="50" rx="12"/><text class="n1" x="366" y="42" text-anchor="middle">Client</text><text class="n2" x="366" y="58" text-anchor="middle">reconciliation, reviews</text></g>
+              <g class="node"><rect x="300" y="125" width="132" height="50" rx="12"/><text class="n1" x="366" y="147" text-anchor="middle">Business partners</text><text class="n2" x="366" y="163" text-anchor="middle">discovery calls</text></g>
+              <g class="node"><rect x="300" y="230" width="132" height="50" rx="12"/><text class="n1" x="366" y="252" text-anchor="middle">BI leadership</text><text class="n2" x="366" y="268" text-anchor="middle">decommission priorities</text></g>
+            </svg>
+          </figure>
+        </div>
+
+        <div class="leave">
+          <h3>What I leave behind</h3>
+          <ul class="tags big">
+            <li>Page-by-page build guide</li>
+            <li>Findings register with status</li>
+            <li>Decision log</li>
+            <li>Click-through glossary overlay</li>
+            <li>Plain-language summaries for non-technical readers</li>
+            <li>Work logs for Confluence</li>
           </ul>
-          <div class="tag-row">
-            <span class="tag">Optimization Modeling</span>
-            <span class="tag">Prescriptive Analytics</span>
-            <span class="tag">Regression Modeling</span>
-            <span class="tag">Decision Analysis</span>
-            <span class="tag">Simulation Modeling</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="block" id="experience">
+      <div class="wrap">
+        <div class="block-head">
+          <p class="eyebrow">Experience</p>
+          <h2>From requirements to reporting, in automotive, insurance and logistics</h2>
+        </div>
+
+        <ol class="timeline">
+          <li>
+            <div class="when">Jun 2026 – Nov 2026</div>
+            <div class="what">
+              <h3>Allianz Partners <span class="role">Business Intelligence Intern (Sep–Nov) · Working Student (Jun–Aug)</span></h3>
+              <p class="where">Solution Delivery &amp; BI, Business Partner squad · Munich</p>
+              <ul>
+                <li>Built and verified the pages of a penalty-bearing SLA scorecard in Power BI, and own the report and DAX measures of the monitoring pages.</li>
+                <li>Logged 22 data and logic defects with cause and status, from blank handling and time zones to an unstable formula. 18 resolved, 3 still open and tracked.</li>
+                <li>Reconciled a 325-row process-mining export against our assignment tables and billing data, traced the gaps to timing, scope and a cancellation-sync issue, and completed the Q3 reconciliation with the issues reported and fixed.</li>
+                <li>Reviewed the near real-time monitoring query ahead of the German go-live and flagged five risks, including a test contract left in scope.</li>
+                <li>Built a five-stage roadmap for the Top 10 business partners and a merged OKR roadmap across six BI squads. The product owner reused parts of it.</li>
+                <li>Defined three Jira portfolio labels and labelled 40 epics to track MicroStrategy decommissioning and the Databricks migration.</li>
+                <li>Wrote a page-by-page build guide, a click-through glossary overlay and plain-language summaries for non-technical stakeholders.</li>
+              </ul>
+              <p class="tags"><span>Power BI</span><span>DAX</span><span>SQL</span><span>Databricks</span><span>Celonis</span><span>Git</span><span>Jira</span></p>
+            </div>
+          </li>
+
+          <li>
+            <div class="when">Apr 2025 – Jun 2025</div>
+            <div class="what">
+              <h3>Hapag-Lloyd <span class="role">Data Science Consultant (Industry Project, team)</span></h3>
+              <p class="where">ISM Hamburg × Hapag-Lloyd, Uptake Management · Hamburg</p>
+              <ul>
+                <li>Built a booking-level no-show model on 205K+ container bookings (about 11% no-shows) to support overbooking decisions.</li>
+                <li>Engineered 30+ features, compared Logistic Regression, Random Forest and XGBoost, and selected Random Forest (AUC-ROC 0.93).</li>
+                <li>In a simplified cost simulation, decision cost per cycle fell from about €8K (random decisions) to about €3K. Presented the business case on site.</li>
+              </ul>
+              <p class="tags"><span>Python</span><span>scikit-learn</span><span>XGBoost</span><span>Business case</span></p>
+            </div>
+          </li>
+
+          <li>
+            <div class="when">May 2022 – Aug 2024</div>
+            <div class="what">
+              <h3>Accenture <span class="role">Packaged App Development Analyst · Software Application Developer</span></h3>
+              <p class="where">Nissan–Renault Alliance account · Bengaluru</p>
+              <ul>
+                <li>Gathered requirements with product owners and operations, then wrote and prioritised user stories in Jira across 10–15 major releases.</li>
+                <li>Analysed 500K+ warranty and vehicle-part records in SQL (Oracle) and flagged 10+ high-risk components.</li>
+                <li>Built and maintained 6 Power BI dashboards (20+ KPIs) on sales, dealerships and logistics for 25+ markets.</li>
+                <li>Traced 100+ production incidents to root cause using ServiceNow and Jira, cutting recurring defects by about 25% on a platform with 10K+ users.</li>
+                <li>Earlier role: integrated REST/SOAP APIs and built workflow applications across sales, warranty and logistics systems. Onboarded and mentored new joiners.</li>
+              </ul>
+              <p class="tags"><span>SQL</span><span>Oracle</span><span>Power BI</span><span>User stories</span><span>Root cause analysis</span></p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="block alt" id="projects">
+      <div class="wrap">
+        <div class="block-head">
+          <p class="eyebrow">Selected projects</p>
+          <h2>Analysis that ends in a decision</h2>
+          <p class="sub">Thesis and university work, labelled as such.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <p class="kicker">M.Sc. thesis</p>
+            <h3>Predicting supplier failures in German manufacturing</h3>
+            <p>An insolvency-risk model for 55,681 firms with 36 engineered features, built so a buyer can see which suppliers to watch.</p>
+            <ul class="metrics">
+              <li><strong>0.74</strong> ROC-AUC</li>
+              <li><strong>76.6%</strong> recall on insolvent firms (out-of-time test)</li>
+              <li><strong>up to 84%</strong> lower Brier score after calibration</li>
+            </ul>
+            <p class="tags"><span>Python</span><span>SHAP</span><span>Risk scoring</span></p>
+          </article>
+
+          <article class="card">
+            <p class="kicker">University · Lancaster</p>
+            <h3>Logistics network optimisation</h3>
+            <p>Excel Solver and VBA model for 2 depots and 12 delivery locations, with what-if scenarios for decision-makers.</p>
+            <ul class="metrics">
+              <li><strong>up to 18%</strong> lower transport cost</li>
+              <li><strong>12%</strong> better vehicle utilisation</li>
+              <li><strong>2 h → under 10 min</strong> for 15+ scenarios</li>
+            </ul>
+            <p class="tags"><span>Excel Solver</span><span>VBA</span></p>
+          </article>
+
+          <article class="card">
+            <p class="kicker">University · Lancaster</p>
+            <h3>Seasonal demand forecasting</h3>
+            <p>48+ months of search data in R. Seasonality, not trend, drove demand, which supports earlier campaign and inventory planning.</p>
+            <ul class="metrics">
+              <li><strong>10.49%</strong> MAPE (Auto ARIMA)</li>
+              <li><strong>p = 0.006</strong> for month effects</li>
+              <li><strong>Mar–May</strong> repeatable demand peak</li>
+            </ul>
+            <p class="tags"><span>R</span><span>ARIMA</span></p>
+          </article>
+
+          <article class="card">
+            <p class="kicker">University · Lancaster</p>
+            <h3>E-commerce returns packaging optimisation</h3>
+            <p>A Python and SciPy model that redesigns a 5-box set for 1,588 returned SKUs, with a 3-view Streamlit dashboard comparing the baseline and optimised sets.</p>
+            <ul class="metrics">
+              <li><strong>85.1% → 69.5%</strong> void fill rate (lower is better)</li>
+              <li><strong>0.15% → 0%</strong> of items that fit no box</li>
+              <li><strong>20 restarts</strong> multi-start Powell optimisation</li>
+            </ul>
+            <p class="tags"><span>Python</span><span>SciPy</span><span>Streamlit</span></p>
+          </article>
+
+          <article class="card">
+            <p class="kicker">University · Lancaster</p>
+            <h3>Dial-a-Bus feasibility and fare optimisation</h3>
+            <p>A business case for a village Dial-a-Bus service: demand regression, a revenue-maximising fare and five fleet scenarios over six years, with an interactive Power BI dashboard.</p>
+            <ul class="metrics">
+              <li><strong>£2.48</strong> revenue-maximising Year 1 fare</li>
+              <li><strong>−0.99</strong> correlation, car ownership vs public transport use</li>
+              <li><strong>up to £311K</strong> modelled Year 2 profit (electric buses, 38% grant)</li>
+            </ul>
+            <p class="tags"><span>Python</span><span>Regression</span><span>Power BI</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOOLKIT -->
+    <section class="block" id="toolkit">
+      <div class="wrap">
+        <div class="block-head">
+          <p class="eyebrow">Toolkit</p>
+          <h2>Where each tool sits in the reporting chain</h2>
+        </div>
+
+        <div class="stack">
+          <div class="layer">
+            <h3>Data <small>where the numbers come from</small></h3>
+            <p class="tags big"><span>SQL (Oracle)</span><span>Databricks</span><span>Unity Catalog</span><span>Celonis</span><span>Azure Data Lake &amp; Synapse</span><span>Microsoft Fabric (exposure)</span></p>
           </div>
-        </article>
-
-        <article class="panel">
-          <div class="panel-head"><div class="icon" style="color:var(--purple); border-color:rgba(157,92,255,.24); background:rgba(157,92,255,.08)">📘</div><div class="date">Jul 2017 – Mar 2021</div></div>
-          <div class="card-title">Bachelor of Engineering in Electronics & Communication</div>
-          <div class="card-sub">SJB Institute of Technology, India</div>
-          <div class="badge" style="color:var(--purple); background:rgba(157,92,255,.10); border-color:rgba(157,92,255,.16)">CGPA 8.1/10</div>
-          <ul>
-            <li>Strong base in systems, logic, analysis, and technical problem solving.</li>
-            <li>Project work spanning electronics, signal thinking, and applied engineering.</li>
-          </ul>
-          <div class="tag-row"><span class="tag">Engineering</span><span class="tag">Systems</span><span class="tag">Mathematics</span></div>
-        </article>
+          <div class="arrow" aria-hidden="true">→</div>
+          <div class="layer">
+            <h3>Logic <small>where the numbers get their meaning</small></h3>
+            <p class="tags big"><span>DAX</span><span>Star schema</span><span>DAX query view</span><span>Python (pandas, scikit-learn, XGBoost, SHAP)</span><span>R</span><span>Excel (Power Query, Solver, VBA)</span></p>
+          </div>
+          <div class="arrow" aria-hidden="true">→</div>
+          <div class="layer">
+            <h3>Delivery <small>where people use the numbers</small></h3>
+            <p class="tags big"><span>Power BI (bookmarks, drill-through, field parameters)</span><span>PBIP &amp; Git, VS Code</span><span>Row-level security design</span><span>Jira &amp; Confluence</span><span>Claude Code &amp; Databricks Genie</span></p>
+          </div>
+        </div>
+        <p class="toolkit-note">Also used: Tableau, SAP Analytics Cloud, SAP S/4HANA Controlling, AWS, ServiceNow, Tabular Editor (exposure). Practices: requirements gathering, KPI definition, data reconciliation, documentation, data storytelling.</p>
       </div>
+    </section>
 
-      <div class="stats">
-        <div class="stat">
-          <div class="stat-icon">🏆</div>
-          <strong>1.9 - 2.2</strong>
-          <span>GPA</span>
+    <!-- BACKGROUND -->
+    <section class="block alt" id="background">
+      <div class="wrap">
+        <div class="block-head">
+          <p class="eyebrow">Background</p>
+          <h2>Education, certificates and languages</h2>
         </div>
 
-        <div class="stat">
-          <div class="stat-icon">🎓</div>
-          <strong>2</strong>
-          <span>DEGREE PROGRAMS</span>
-        </div>
-
-        <div class="stat">
-          <div class="stat-icon">📊</div>
-          <strong>4+</strong>
-          <span>RESEARCH PROJECTS</span>
-        </div>
-
-        <div class="stat">
-          <div class="stat-icon">📜</div>
-          <strong>1</strong>
-          <span>STUDY ABROAD</span>
+        <div class="bg-grid">
+          <div class="bg-item">
+            <p class="when">Sep 2024 – Feb 2027</p>
+            <h3>M.Sc. Business Intelligence &amp; Data Science</h3>
+            <p>International School of Management (ISM), Hamburg. All exams and thesis completed; final certificate follows once the internship report is graded.</p>
+            <p>Semester abroad: Lancaster University, UK (Business Analytics: optimisation, forecasting, statistical modelling in R).</p>
+          </div>
+          <div class="bg-item">
+            <p class="when">2017 – 2021</p>
+            <h3>B.E. Electronics &amp; Communication Engineering</h3>
+            <p>SJB Institute of Technology, India. CGPA 8.1/10.</p>
+          </div>
+          <div class="bg-item">
+            <p class="when">Certificates</p>
+            <h3>Credentials</h3>
+            <p>Google Data Analytics Professional Certificate.</p>
+            <p>SAP ERP Controlling (Cost Center Accounting), S/4HANA, ISM Hamburg, 11/2024.</p>
+          </div>
+          <div class="bg-item">
+            <p class="when">Languages</p>
+            <h3>English and German</h3>
+            <p>English C1 (working language). German A1, progressing toward B1.</p>
+          </div>
         </div>
       </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <div class="wrap contact-inner">
+        <p class="eyebrow">Contact</p>
+        <h2>If your team has numbers nobody fully trusts, let’s talk.</h2>
+        <p class="sub">I’m looking for full-time Business Intelligence, Data Analyst and Business Analyst roles in Germany, starting late November 2026. I’m based in Munich.</p>
+        <div class="cta-row center">
+          <a class="btn btn-primary" href="mailto:yashaswini.sandeep.27@gmail.com">yashaswini.sandeep.27@gmail.com</a>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/yashaswinisandeep27/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn btn-ghost" href="https://github.com/Yashaswini-Sandeep" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span>© 2026 Yashaswini Sandeep</span>
+      <span>Client details are anonymised. Figures come from my own project work.</span>
     </div>
-  </section>
-
-  <section id="projects">
-    <div class="wrap projects-area">
-      <div class="title-block">
-        <div class="eyebrow">Selected Work</div>
-        <h2>Projects</h2>
-        <div class="subtitle">A few data-focused projects spanning predictive modeling, forecasting, and optimization.</div>
-      </div>
-
-      <div class="project-carousel-shell">
-        <button class="arrow left-arrow" id="prev">‹</button>
-
-        <div class="project-stage" id="projectStage">
-          <article class="project-card right">
-            <div class="project-glow blue"></div>
-            <div class="project-head">
-              <span class="mini">Time Series and Forecasting</span>
-              <span class="mini">GRAD</span>
-            </div>
-            <div class="project-icon">📈</div>
-            <h3>Seasonal Demand Forecasting with ARIMA</h3>
-            <p>Analyzed 48+ months of balcony-railing search data, uncovering a repeatable March–May demand peak with average monthly volume of ~3.2K and highs of ~6.7K.</p>
-            <p>Applied end-to-end time series diagnostics in R, validating non-stationarity (ADF p > 0.28) and isolating strong seasonality to improve forecast reliability.</p>
-            <p>Built and compared multiple forecasting models, selecting Auto ARIMA(1,1,0)(0,1,0)[12] as the best fit for a 12-month forecast horizon with AIC 356.99, RMSE 842.92, and MAPE 10.49%.</p>
-            <p>Translated forecast results into business actions by showing that seasonality not "long-term" trend drove demand, with month effects statistically significant (p = 0.006) despite a modest R² = 0.22, supporting earlier campaign and inventory planning.</p>
-
-            <div class="tag-row">
-              <span class="tag">R</span>
-              <span class="tag">ARIMA</span>
-              <span class="tag">MAPE</span>
-            </div>
-          </article>
-
-          <article class="project-card left">
-            <div class="project-glow orange"></div>
-            <div class="project-head">
-              <span class="mini">Prescriptive Optimization</span>
-              <span class="mini">GRAD</span>
-            </div>
-            <div class="project-icon">🚚</div>
-            <h3>Logistics Network Optimization & Cost Simulation</h3>
-            <p>Built Excel Solver optimization model for a logistics network (2 depots, 12 delivery locations), reducing transport cost by up to 18% and improving vehicle utilization by 12%.</p>
-            <p>Automated 15+ cost and sensitivity scenarios using Solver + VBA, cutting analysis time from ~2 hours to less than 10 minutes.</p>
-            <p>Designed a dynamic decision-support model to optimize shipment allocation under demand, capacity, and routing constraints.</p>
-            <p>Performed what-if simulations on routing and depot operations, enabling data-driven logistics planning and cost optimization.</p>
-            <div class="tag-row">
-              <span class="tag">Excel Solver</span>
-              <span class="tag">Macros & VBA</span>
-              <span class="tag">Prescriptive</span>
-            </div>
-          </article>
-
-          <article class="project-card hidden-right">
-            <div class="project-glow purple"></div>
-            <div class="project-head">
-              <span class="mini">Optimisation</span>
-              <span class="mini">GRAD</span>
-            </div>
-            <div class="project-icon">📊</div>
-            <h3>E-Commerce Packaging Optimization with Python</h3>
-            <p>Built a Python packaging optimization model using SciPy (Powell method) to redesign box dimensions based on SKU returns data.</p>
-            <p>Developed a box allocation algorithm that assigns items to the smallest feasible box with rotation handling, improving packing efficiency.</p>
-            <p>Reduced average void fill from 85.11% → 69.46% and eliminated outliers from 0.15% → 0%, significantly lowering packaging waste.</p>
-            <p>Created a Streamlit analytics dashboard to visualize packaging KPIs, SKU size distributions, and box utilization for decision support.</p>
-
-            <div class="tag-row">
-              <span class="tag">Streamlit</span>
-              <span class="tag">Python</span>
-              <span class="tag">KPIs</span>
-            </div>
-          </article>
-
-          <article class="project-card hidden-left">
-            <div class="project-glow green"></div>
-            <div class="project-head">
-              <span class="mini">Logistics & Optimisation Analytics</span>
-              <span class="mini">GRAD</span>
-            </div>
-            <div class="project-icon">🚌</div>
-            <h3>Demand Forecasting & Profitability Analytics</h3>
-            <p>Built an end-to-end analytics model evaluating the viability of a Dial-a-Bus service across 8 villages, integrating demographic, demand, and cost datasets for decision support.</p>
-            <p>Estimated ~2,948 regular users using correlation and regression analysis, identifying an optimal fare of ~£2.48 to balance demand and revenue.</p>
-            <p>Developed scenario-based forecasting models projecting 322K passenger trips and ~£43K profit by Year 3.</p>
-            <p>Created an interactive Power BI dashboard to simulate pricing, demand, and operational scenarios, supporting strategies reaching ~£69.9K annual profit by Year 4.</p>
-
-            <div class="tag-row">
-              <span class="tag">Seasonal forecasting</span>
-              <span class="tag">Revenue Optimisation</span>
-              <span class="tag">Dashboard</span>
-            </div>
-          </article>
-        </div>
-
-        <button class="arrow right-arrow" id="next">›</button>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="wrap">
-      <div class="title-block">
-        <div class="eyebrow">Open to Opportunities</div>
-        <h2>Let’s Connect</h2>
-        <div class="subtitle">I’m actively looking for roles in Germany across data analytics, BI, and applied data science.</div>
-      </div>
-
-      <div class="contact-grid">
-        <div class="contact-visual">
-          <div class="earth">
-            <div class="globe">
-              <span class="node lg" style="top:18%; left:64%"></span>
-              <span class="node sm" style="top:22%; left:32%"></span>
-              <span class="node sm" style="top:28%; left:72%"></span>
-              <span class="node sm" style="top:40%; left:78%"></span>
-              <span class="node lg" style="top:50%; left:18%"></span>
-              <span class="node sm" style="top:55%; left:70%"></span>
-              <span class="node sm" style="top:64%; left:28%"></span>
-              <span class="node sm" style="top:70%; left:38%"></span>
-              <span class="node sm" style="top:74%; left:55%"></span>
-              <span class="node sm" style="top:78%; left:64%"></span>
-            </div>
-
-            <div class="contact-meta">
-              <div class="location-pill">
-                <span class="pin">⌖</span>
-                <span>Germany, DE</span>
-              </div>
-              <div class="relocation-text">Open to Remote &amp; Relocation</div>
-            </div>
-          </div>
-
-          <div class="contact-links">
-            <a class="contact-link" href="mailto:yashaswini.san27@gmail.com">
-              <div class="contact-link-left">
-                <div class="contact-link-icon">✉</div>
-                <div class="contact-link-label">Email</div>
-              </div>
-              <div class="contact-link-arrow">↗</div>
-            </a>
-
-            <a class="contact-link" href="https://www.linkedin.com/in/yashaswinisandeep27/" target="_blank">
-              <div class="contact-link-left">
-                <div class="contact-link-icon">in</div>
-                <div class="contact-link-label">LinkedIn</div>
-              </div>
-              <div class="contact-link-arrow">↗</div>
-            </a>
-
-            <a class="contact-link" href="https://github.com/Yashaswini-Sandeep" target="_blank">
-              <div class="contact-link-left">
-                <div class="contact-link-icon">⌘</div>
-                <div class="contact-link-label">GitHub</div>
-              </div>
-              <div class="contact-link-arrow">↗</div>
-            </a>
-          </div>
-        </div>
-
-        <form class="contact-form">
-          <h3>Send a Message</h3>
-          <div class="form-grid">
-            <div class="field"><label>Your Name</label><input placeholder="John Doe" /></div>
-            <div class="field"><label>Your Email</label><input placeholder="john@example.com" /></div>
-          </div>
-          <div class="field"><label>Subject</label><input placeholder="Let's collaborate on..." /></div>
-          <div class="field"><label>Message</label><textarea placeholder="Hello, I'd like to discuss..."></textarea></div>
-          <button type="button" class="send">
-            <span class="send-inner">Send Message ✈</span>
-          </button>
-        </form>
-      </div>
-    </div>
-  </section>
+  </footer>
 
   <script src="script.js"></script>
 </body>

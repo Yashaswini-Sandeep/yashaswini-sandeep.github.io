@@ -1,158 +1,78 @@
-const canvas = document.getElementById('networkCanvas');
-const ctx = canvas.getContext('2d');
+// Portfolio behaviour: theme toggle, active nav link, scroll reveal, chart animation.
+// Everything degrades gracefully: without JS the page is fully visible.
+(function () {
+  var root = document.documentElement;
+  root.classList.add('js');
 
-let nodes = [];
-let particles = [];
-const nodeCount = 42;
-const particleCount = 18;
-const maxDistance = 170;
+  // ---- Theme toggle (remembered per browser; works without storage) ----
+  var toggle = document.getElementById('themeToggle');
+  try {
+    var saved = localStorage.getItem('theme');
+    if (saved === 'light' || saved === 'dark') root.setAttribute('data-theme', saved);
+  } catch (e) { /* storage blocked: ignore */ }
 
-function resizeCanvas() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-  createNetwork();
-}
-
-function createNetwork() {
-  nodes = [];
-  particles = [];
-
-  for (let i = 0; i < nodeCount; i++) {
-    nodes.push({
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height,
-      vx: (Math.random() - 0.5) * 0.25,
-      vy: (Math.random() - 0.5) * 0.25,
-      r: Math.random() * 2 + 1.5
-    });
-  }
-
-  for (let i = 0; i < particleCount; i++) {
-    particles.push({
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height,
-      vx: Math.random() * 0.8 + 0.3,
-      size: Math.random() * 2 + 1
-    });
-  }
-}
-
-function drawNetwork() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-  for (let i = 0; i < nodes.length; i++) {
-    const a = nodes[i];
-
-    a.x += a.vx;
-    a.y += a.vy;
-
-    if (a.x < 0 || a.x > canvas.width) a.vx *= -1;
-    if (a.y < 0 || a.y > canvas.height) a.vy *= -1;
-
-    for (let j = i + 1; j < nodes.length; j++) {
-      const b = nodes[j];
-      const dx = a.x - b.x;
-      const dy = a.y - b.y;
-      const dist = Math.sqrt(dx * dx + dy * dy);
-
-      if (dist < maxDistance) {
-        const alpha = 1 - dist / maxDistance;
-        ctx.beginPath();
-        ctx.strokeStyle = `rgba(33, 212, 253, ${alpha * 0.16})`;
-        ctx.lineWidth = 1;
-        ctx.moveTo(a.x, a.y);
-        ctx.lineTo(b.x, b.y);
-        ctx.stroke();
+  if (toggle) {
+    toggle.addEventListener('click', function () {
+      var current = root.getAttribute('data-theme');
+      if (!current) {
+        current = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
       }
+      var next = current === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) { /* ignore */ }
+    });
+  }
+
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hasIO = 'IntersectionObserver' in window;
+
+  // ---- Scroll reveal ----
+  var revealTargets = document.querySelectorAll(
+    '.snap, .ledger, .rubric, .flow li, .case-text, .chart-card, .chevrons, .road-text, .leave, .spec, .hub-card, .timeline > li, .card, .layer, .bg-item, .contact-inner'
+  );
+  revealTargets.forEach(function (el) { el.classList.add('reveal'); });
+
+  if (hasIO && !reduce) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealTargets.forEach(function (el) { io.observe(el); });
+  } else {
+    revealTargets.forEach(function (el) { el.classList.add('in'); });
+  }
+
+  // ---- Bar chart animation ----
+  var bars = document.querySelector('.bars');
+  if (bars) {
+    if (hasIO && !reduce) {
+      var bio = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) { bars.classList.add('in'); bio.disconnect(); }
+        });
+      }, { threshold: 0.4 });
+      bio.observe(bars);
+    } else {
+      bars.classList.add('in');
     }
   }
 
-  nodes.forEach(node => {
-    ctx.beginPath();
-    ctx.fillStyle = 'rgba(170, 235, 255, 0.9)';
-    ctx.shadowColor = 'rgba(33, 212, 253, 0.8)';
-    ctx.shadowBlur = 10;
-    ctx.arc(node.x, node.y, node.r, 0, Math.PI * 2);
-    ctx.fill();
-  });
+  // ---- Active nav link ----
+  var links = Array.prototype.slice.call(document.querySelectorAll('.links a'));
+  var map = links.map(function (a) { return document.querySelector(a.getAttribute('href')); });
 
-  ctx.shadowBlur = 0;
-
-  particles.forEach(p => {
-    p.x += p.vx;
-    if (p.x > canvas.width + 20) {
-      p.x = -20;
-      p.y = Math.random() * canvas.height;
-    }
-
-    ctx.beginPath();
-    ctx.fillStyle = 'rgba(157, 92, 255, 0.75)';
-    ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-    ctx.fill();
-
-    ctx.beginPath();
-    const grad = ctx.createLinearGradient(p.x - 30, p.y, p.x + 5, p.y);
-    grad.addColorStop(0, 'rgba(33, 212, 253, 0)');
-    grad.addColorStop(1, 'rgba(33, 212, 253, 0.28)');
-    ctx.strokeStyle = grad;
-    ctx.lineWidth = 2;
-    ctx.moveTo(p.x - 24, p.y);
-    ctx.lineTo(p.x, p.y);
-    ctx.stroke();
-  });
-
-  requestAnimationFrame(drawNetwork);
-}
-
-window.addEventListener('resize', resizeCanvas);
-resizeCanvas();
-drawNetwork();
-
-const navLinks = [...document.querySelectorAll('.links a')];
-const sections = navLinks.map(link => document.querySelector(link.getAttribute('href')));
-
-function updateActiveNav() {
-  const scrollPosition = window.scrollY + window.innerHeight * 0.35;
-
-  sections.forEach((section, index) => {
-    if (!section) return;
-
-    const sectionTop = section.offsetTop;
-    const sectionBottom = sectionTop + section.offsetHeight;
-
-    if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-      navLinks.forEach(link => link.classList.remove('active'));
-      navLinks[index].classList.add('active');
-    }
-  });
-}
-
-window.addEventListener('scroll', updateActiveNav);
-window.addEventListener('load', updateActiveNav);
-
-const cards = [...document.querySelectorAll('.project-card')];
-let idx = 0;
-
-function renderCards(){
-  cards.forEach((card, i) => {
-    card.className = 'project-card';
-    const pos = (i - idx + cards.length) % cards.length;
-    if(pos === 0) card.classList.add('center');
-    else if(pos === 1) card.classList.add('right');
-    else if(pos === cards.length - 1) card.classList.add('left');
-    else if(pos < cards.length / 2) card.classList.add('hidden-right');
-    else card.classList.add('hidden-left');
-  });
-}
-
-renderCards();
-
-document.getElementById('next').addEventListener('click', () => {
-  idx = (idx + 1) % cards.length;
-  renderCards();
-});
-
-document.getElementById('prev').addEventListener('click', () => {
-  idx = (idx - 1 + cards.length) % cards.length;
-  renderCards();
-});
+  function updateActive() {
+    var pos = window.scrollY + window.innerHeight * 0.3;
+    var activeIndex = -1;
+    map.forEach(function (section, i) {
+      if (section && section.offsetTop <= pos) activeIndex = i;
+    });
+    links.forEach(function (a, i) { a.classList.toggle('active', i === activeIndex); });
+  }
+  window.addEventListener('scroll', updateActive, { passive: true });
+  window.addEventListener('load', updateActive);
+})();
