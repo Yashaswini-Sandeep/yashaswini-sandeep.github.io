@@ -28,7 +28,7 @@
 
   // ---- Scroll reveal ----
   var revealTargets = document.querySelectorAll(
-    '.snap, .ledger, .rubric, .flow li, .case-text, .chart-card, .chevrons, .road-text, .leave, .spec, .hub-card, .timeline > li, .card, .layer, .bg-item, .contact-inner'
+    '.snap, .ledger, .rubric, .flow li, .case-text, .chart-card, .chevrons, .lake, .road-text, .leave, .spec, .hub-card, .timeline > li, .card, .layer, .bg-item, .contact-inner'
   );
   revealTargets.forEach(function (el) { el.classList.add('reveal'); });
 

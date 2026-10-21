@@ -26,6 +26,7 @@
         <a href="#scorecard">SLA scorecard</a>
         <a href="#roadmap">Roadmap</a>
         <a href="#craft">How I work</a>
+        <a href="#databricks">Databricks</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
       </div>
@@ -429,7 +430,70 @@
     </section>
 
     <!-- EXPERIENCE -->
-    <section class="block" id="experience">
+    <section class="block" id="databricks">
+      <div class="wrap">
+        <div class="block-head">
+          <p class="eyebrow">Databricks, hands-on</p>
+          <h2>I work where the KPI numbers are born: the gold layer.</h2>
+          <p class="sub">Data for the SLA scorecard flows from the claims system through Databricks bronze, silver and gold layers into Power BI. Gold is the point of truth for KPI definitions, so I trace logic issues back to the table and fix them at query level, not by patching the report.</p>
+        </div>
+
+        <ol class="lake" aria-label="Data flow from the claims system through bronze, silver and gold layers to Power BI">
+          <li><span class="lk-t">Claims system</span><span class="lk-s">source data</span></li>
+          <li><span class="lk-t">Bronze</span><span class="lk-s">raw data</span></li>
+          <li><span class="lk-t">Silver</span><span class="lk-s">cleaned and joined</span></li>
+          <li class="mine"><span class="lk-t">Gold</span><span class="lk-s">KPI definitions live here</span></li>
+          <li class="mine"><span class="lk-t">Power BI report</span><span class="lk-s">DAX, visuals, checks</span></li>
+        </ol>
+        <p class="lake-note"><span class="swatch-b"></span>Highlighted: where I work day to day. I also read the column lineage across all three layers to trace where a field comes from.</p>
+
+        <div class="dbx-cards">
+          <article class="card">
+            <p class="kicker">Query and trace</p>
+            <h3>Reading the logic behind the numbers</h3>
+            <p>Read SQL on the gold-layer assignment and claims tables and traced fields through the gold, silver and bronze column lineage. Decoded the scheduled-versus-immediate assignment code from the source SQL and built the ad-hoc versus scheduled chart on it.</p>
+            <p class="tags"><span>Databricks SQL</span><span>Column lineage</span></p>
+          </article>
+
+          <article class="card">
+            <p class="kicker">Reconcile across systems</p>
+            <h3>Making three systems agree</h3>
+            <p>Supported reconciliation of billing data across Celonis, Databricks and the claims system. Causes found: out-of-scope handling fees, manual cases without external IDs, cancellation-sync gaps and data-entry errors. Also checked SLA invoicing data against reporting data in SQL.</p>
+            <p class="tags"><span>SQL</span><span>Celonis</span><span>Reconciliation</span></p>
+          </article>
+
+          <article class="card">
+            <p class="kicker">Find gold-layer issues</p>
+            <h3>Logging what the data does not say</h3>
+            <p>Logged gold-layer findings in my register: placeholder dates (19000101, 9991227, 29991231), two competing benefit-category fields, and a client-specific damage-code exclusion inside the Repair on Spot logic.</p>
+            <p class="tags"><span>Data quality</span><span>Gold layer</span></p>
+          </article>
+
+          <article class="card">
+            <p class="kicker">Access and setup</p>
+            <h3>Unblocking my own environment</h3>
+            <p>Diagnosed a catalog access error as a missing USE CATALOG privilege and escalated it as a permissions issue. Worked through the setup of Databricks SQL, Git and Power BI refresh.</p>
+            <p class="tags"><span>Unity Catalog</span><span>Git</span><span>Power BI refresh</span></p>
+          </article>
+
+          <article class="card">
+            <p class="kicker">AI-assisted analysis</p>
+            <h3>Faster exploration</h3>
+            <p>Use Databricks Genie to explore data and draft SQL, and Claude Code in VS Code to build and edit query code.</p>
+            <p class="tags"><span>Genie</span><span>Claude Code</span><span>VS Code</span></p>
+          </article>
+
+          <article class="card">
+            <p class="kicker">Platform migration</p>
+            <h3>Moving reporting onto Databricks</h3>
+            <p>Own the open item to migrate VOC and CSAT data to Databricks together with data engineering. Defined the Jira labels and labelled 40 epics that track the MicroStrategy decommissioning and the Databricks migration.</p>
+            <p class="tags"><span>Migration</span><span>MicroStrategy</span><span>Jira</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="block alt" id="experience">
       <div class="wrap">
         <div class="block-head">
           <p class="eyebrow">Experience</p>
@@ -446,6 +510,7 @@
                 <li>Built and verified the pages of a penalty-bearing SLA scorecard in Power BI, and own the report and DAX measures of the monitoring pages.</li>
                 <li>Logged 22 data and logic defects with cause and status, from blank handling and time zones to an unstable formula. 18 resolved, 3 still open and tracked.</li>
                 <li>Reconciled a 325-row process-mining export against our assignment tables and billing data, traced the gaps to timing, scope and a cancellation-sync issue, and completed the Q3 reconciliation with the issues reported and fixed.</li>
+                <li>Worked hands-on in Databricks: read gold-layer SQL and column lineage, reconciled billing data across Databricks, Celonis and the claims system, and used Genie to explore data and draft SQL.</li>
                 <li>Reviewed the near real-time monitoring query ahead of the German go-live and flagged five risks, including a test contract left in scope.</li>
                 <li>Built a five-stage roadmap for the Top 10 business partners and a merged OKR roadmap across six BI squads. The product owner reused parts of it.</li>
                 <li>Defined three Jira portfolio labels and labelled 40 epics to track MicroStrategy decommissioning and the Databricks migration.</li>
@@ -489,7 +554,7 @@
     </section>
 
     <!-- PROJECTS -->
-    <section class="block alt" id="projects">
+    <section class="block" id="projects">
       <div class="wrap">
         <div class="block-head">
           <p class="eyebrow">Selected projects</p>
@@ -562,7 +627,7 @@
     </section>
 
     <!-- TOOLKIT -->
-    <section class="block" id="toolkit">
+    <section class="block alt" id="toolkit">
       <div class="wrap">
         <div class="block-head">
           <p class="eyebrow">Toolkit</p>
@@ -572,7 +637,7 @@
         <div class="stack">
           <div class="layer">
             <h3>Data <small>where the numbers come from</small></h3>
-            <p class="tags big"><span>SQL (Oracle)</span><span>Databricks</span><span>Unity Catalog</span><span>Celonis</span><span>Azure Data Lake &amp; Synapse</span><span>Microsoft Fabric (exposure)</span></p>
+            <p class="tags big"><span>SQL (Oracle)</span><span>Databricks (SQL, medallion layers)</span><span>Unity Catalog</span><span>Celonis</span><span>Azure Data Lake &amp; Synapse</span><span>Microsoft Fabric (exposure)</span></p>
           </div>
           <div class="arrow" aria-hidden="true">→</div>
           <div class="layer">
@@ -590,7 +655,7 @@
     </section>
 
     <!-- BACKGROUND -->
-    <section class="block alt" id="background">
+    <section class="block" id="background">
       <div class="wrap">
         <div class="block-head">
           <p class="eyebrow">Background</p>

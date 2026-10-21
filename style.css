@@ -356,3 +356,21 @@ h3 { font-size: 18px; }
   .js .reveal { opacity: 1; transform: none; }
   .js .bar, .js .wbar i { transform: none; }
 }
+
+/* Databricks section */
+.lake { list-style: none; display: grid; grid-template-columns: repeat(5, 1fr); gap: 28px; margin: 0 0 14px; padding: 0; counter-reset: lk; }
+.lake li { position: relative; display: flex; flex-direction: column; gap: 4px; padding: 16px 16px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; text-align: center; }
+.lake li:not(:last-child)::after { content: "\2192"; position: absolute; right: -22px; top: 50%; transform: translateY(-50%); color: var(--blue-deep); font-weight: 700; font-size: 18px; }
+.lake .lk-t { font-weight: 700; font-size: 15px; }
+.lake .lk-s { font-size: 12.5px; color: var(--muted); }
+.lake li.mine { background: var(--blue-soft); border: 2px solid var(--blue-deep); }
+.lake li.mine .lk-t { color: var(--blue-ink); }
+.lake-note { display: flex; align-items: center; gap: 10px; font-size: 13.5px; color: var(--muted); margin: 0 0 32px; }
+.swatch-b { width: 14px; height: 14px; flex: none; border-radius: 4px; background: var(--blue-soft); border: 2px solid var(--blue-deep); }
+.dbx-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+@media (max-width: 960px) {
+  .lake { grid-template-columns: 1fr; gap: 24px; }
+  .lake li:not(:last-child)::after { content: "\2193"; right: auto; left: 50%; top: auto; bottom: -22px; transform: translateX(-50%); }
+  .dbx-cards { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) { .dbx-cards { grid-template-columns: 1fr; } }
