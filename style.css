@@ -382,3 +382,25 @@ h3 { font-size: 18px; }
 .rate b { font-family: var(--serif); font-size: 17px; line-height: 1; color: var(--ink); }
 .rate i { display: block; height: 5px; border-radius: 999px; background: var(--blue-deep); width: var(--w); }
 .rate::after { content: none; }
+
+/* Impact: STAR cards */
+.star-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.star { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; display: flex; flex-direction: column; }
+.star header { padding: 18px 24px; background: var(--apricot-soft); border-bottom: 1px solid var(--line); }
+.star-ctx { display: block; font-size: 11.5px; text-transform: uppercase; letter-spacing: .12em; font-weight: 700; color: var(--terra); margin-bottom: 6px; }
+.star h3 { font-family: var(--serif); font-size: 20px; line-height: 1.25; }
+.star dl { padding: 6px 24px 0; display: flex; flex-direction: column; flex: 1; }
+.star dl > div { display: grid; grid-template-columns: 112px 1fr; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+.star dt { display: flex; align-items: flex-start; gap: 8px; font-size: 12px; text-transform: uppercase; letter-spacing: .08em; font-weight: 700; color: var(--muted); }
+.star dt span { flex: none; display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: var(--blue); color: var(--on-blue); font-size: 12px; font-weight: 800; letter-spacing: 0; margin-top: -2px; }
+.star dd { font-size: 14.5px; line-height: 1.5; }
+.star dl > div.res { margin: auto -24px 0; padding: 14px 24px 16px; background: var(--blue-soft); border-bottom: 0; }
+.star .res dt { color: var(--blue-ink); }
+.star .res dt span { background: var(--terra); color: var(--bg); }
+.star .res dd { font-weight: 600; color: var(--ink); }
+@media (max-width: 960px) { .star-grid { grid-template-columns: 1fr; } }
+@media (max-width: 520px) {
+  .star dl > div { grid-template-columns: 1fr; gap: 4px; }
+  .star header, .star dl { padding-left: 18px; padding-right: 18px; }
+  .star dl > div.res { margin-left: -18px; margin-right: -18px; padding-left: 18px; padding-right: 18px; }
+}
